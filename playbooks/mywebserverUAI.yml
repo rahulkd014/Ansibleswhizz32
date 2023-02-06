@@ -5,7 +5,8 @@
   - name: install webserver(apache2) on ubuntu20 node1
     apt:
      name: apache2
-     state: present
+     update_cache: yes
+     state: latest
     when: ansible_os_family == "Debian"
 
   - name: start the apache2 service
